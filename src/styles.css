@@ -1,1 +1,36 @@
-/* Add application styles & imports to this file! */
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #646464;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 30;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+router-outlet + *  {
+  padding: 0 16px;
+}
+
+/* Text */
+
+h1 {
+  font-size: 32px;
+}
+
+button {
+  font-size: 20px;
+  color: #a833df;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #9ee780;
+  border: none;
+  padding: 8px 16px;
+}

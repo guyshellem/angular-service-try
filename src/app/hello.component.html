@@ -3,3 +3,7 @@
 <button (click)='showConfig()'>
   Get
 </button>
+
+<p *ngIf="config.hello">
+    hello {{ config.hello }}
+</p>

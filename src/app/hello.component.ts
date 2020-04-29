@@ -9,7 +9,7 @@ import { RequestsService } from './requests.service';
 })
 export class HelloComponent  {
   constructor(private requests: RequestsService) {
-    
+    this.config = {}
   }
 
   config: Object;
@@ -18,8 +18,7 @@ export class HelloComponent  {
   showConfig() {
     this.requests.getConfig()
     .subscribe((data) => this.config = {
-        heroesUrl: data['heroesUrl'],
-        textfile:  data['textfile']
+        hello: data['hello'],
     });
   }
 }

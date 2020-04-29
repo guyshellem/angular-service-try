@@ -8,7 +8,7 @@ export class RequestsService {
 
   constructor(private http: HttpClient) { }
 
-  configUrl = 'assets/config.json';
+  configUrl = './assets/config.json';
 
   public getConfig() {
     return this.http.get(this.configUrl);

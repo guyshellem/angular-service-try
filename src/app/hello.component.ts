@@ -3,7 +3,7 @@ import { RequestsService } from './requests.service';
 
 @Component({
   selector: 'hello',
-  template: `<h1>Hello {{name}}!</h1>`,
+  templateUrl: './hello.component.html',
   styles: [`h1 { font-family: Lato; }`],
   providers:  [ RequestsService ]
 })
@@ -12,12 +12,12 @@ export class HelloComponent  {
     
   }
 
-  
+  config: Object;
   @Input() name: string;
 
   showConfig() {
     this.requests.getConfig()
-    .subscribe((data: Config) => this.config = {
+    .subscribe((data) => this.config = {
         heroesUrl: data['heroesUrl'],
         textfile:  data['textfile']
     });

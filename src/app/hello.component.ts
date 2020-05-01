@@ -1,6 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { RequestsService } from './requests.service';
 
+export interface Hello {
+  hello? :string;
+}
+
 @Component({
   selector: 'hello',
   templateUrl: './hello.component.html',
@@ -12,7 +16,7 @@ export class HelloComponent  {
     this.config = {}
   }
 
-  config: Object;
+  config: Hello;
   @Input() name: string;
 
   showConfig() {

@@ -8,10 +8,10 @@ export class RequestsService {
 
   constructor(private http: HttpClient) { }
 
-  configUrl = './assets/config.json';
+  configUrl = '127.0.0.1:32000';
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Host': 'myapp.test' })
   };
 
   public getConfig() {

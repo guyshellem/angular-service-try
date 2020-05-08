@@ -1,0 +1,20 @@
+<a>Press here to GET data:</a>
+<div>
+  <button (click)='showMovies();'>
+    Get
+  </button>
+</div>
+
+<a>And here to POST...</a>
+<div>
+  <label>Movie name:
+    <input #movieName>
+  </label>
+  <button (click)="addMovies(movieName.value); movieName.value=''">
+    Post
+  </button>
+</div>
+
+<div *ngFor="let movie of movies">
+    Movie name: {{movie.name}}
+</div>

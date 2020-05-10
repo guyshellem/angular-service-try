@@ -4,7 +4,6 @@ image:
 
 app:
   name: "movies-frontend"
-  chartVal: "env-val"
 
 service:
   name: "movies-frontend"

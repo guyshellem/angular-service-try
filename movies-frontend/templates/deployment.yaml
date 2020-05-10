@@ -17,6 +17,6 @@ spec:
         image: {{ .Values.image.repo }}:{{ .Values.image.tag }}
         ports:
         - name: ui
-          containerPort: 8080
+          containerPort: 80
       imagePullSecrets:
       - name: regcred

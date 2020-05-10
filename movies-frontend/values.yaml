@@ -9,4 +9,4 @@ service:
   name: "movies-frontend"
   type: ClusterIP
   externalPort: 80
-  internalPort: 8080
+  internalPort: 80

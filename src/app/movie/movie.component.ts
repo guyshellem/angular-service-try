@@ -28,6 +28,7 @@ export class MovieComponent implements OnInit {
 
   ngOnInit() {
     //this.showMovies();
+    this.movies = []
   }
 
   showMovies() {
@@ -35,7 +36,7 @@ export class MovieComponent implements OnInit {
   }
 
   addMovies(name: string) {
-    this.requests.postMovie({ name: name } as Movie).subscribe(movies => this.movies = movies['movies']);
+    this.requests.postMovie({ name: name } as Movie).subscribe(res => this.movies.push(res['movie']));
   }
 
 }

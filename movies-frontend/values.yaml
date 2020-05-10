@@ -1,0 +1,13 @@
+image:
+  repo: gshellem/movies-frontend
+  tag: 0.0.1
+
+app:
+  name: "movies-frontend"
+  chartVal: "env-val"
+
+service:
+  name: "movies-frontend"
+  type: ClusterIP
+  externalPort: 80
+  internalPort: 8080

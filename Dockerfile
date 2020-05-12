@@ -14,5 +14,5 @@
 
 # TODO: update docker and reintroduce this
 
-FROM nginx:1.17.1-alpine
-COPY /dist/demo /usr/share/nginx/html
+FROM nginx:1.15.8-alpine
+COPY /dist/demo/ /usr/share/nginx/html

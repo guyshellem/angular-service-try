@@ -4,17 +4,24 @@
     Get
   </button>
 </div>
+<br>
 
-<a>And here to POST...</a>
-<div>
-  <label>Movie name:
-    <input #movieName>
-  </label>
-  <button (click)="addMovies(movieName.value); movieName.value=''">
-    Post
-  </button>
-</div>
+<app-movie-editor></app-movie-editor>
 
+<br>
 <div *ngFor="let movie of movies">
     Movie name: {{movie.name}}
+    <button (click)="showMovie(movie.name);">
+      Expand
+    </button>
+</div>
+
+
+<div *ngIf="movieOnDisplay">
+  <h1>
+      Selected movie: {{movieOnDisplay.name}}
+  </h1>
+    <a *ngIf="movieOnDisplay.genre">
+        Genre: {{movieOnDisplay.genre}}
+    </a>
 </div>

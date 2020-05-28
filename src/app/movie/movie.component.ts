@@ -12,31 +12,24 @@ export interface Movie {
   styleUrls: ['./movie.component.css'],
   providers:  [ MovieService ]
 })
-
-
 export class MovieComponent implements OnInit {
 
   movies: Movie[];
+  movieOnDisplay: Movie;
 
-  mockInput: Movie = {
-    name: "some movieeeeeeeeeee"
-  }
-
-  constructor(private requests: MovieService) {
-    
-  }
+  constructor(private requests: MovieService) {}
 
   ngOnInit() {
     //this.showMovies();
-    this.movies = []
+    this.movies = [];
   }
 
   showMovies() {
     this.requests.getMovies().subscribe(movies => this.movies = movies['movies']);
   }
 
-  addMovies(name: string) {
-    this.requests.postMovie({ name: name } as Movie).subscribe(res => this.movies.push(res['movie']));
+  showMovie(name: string) {
+    this.requests.getMovie(name).subscribe(res => this.movieOnDisplay = res['movie']);
   }
 
 }

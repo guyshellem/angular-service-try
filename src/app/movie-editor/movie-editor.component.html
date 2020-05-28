@@ -1,0 +1,25 @@
+<form [formGroup]="movieForm" (ngSubmit)="addMovies()">
+
+  <label>
+      Movie Name<b>*</b>:
+    <input id="name" class="form-control" formControlName="name">
+
+  </label>
+    <br>
+  <label>
+    Genre:
+    <input type="text" formControlName="genre">
+  </label>
+<br><br>
+    <div *ngIf="movieForm.valid">
+            <button type="submit" [disabled]="!movieForm.valid">Add</button>
+    </div>
+
+    <div *ngIf="!movieForm.valid">
+         <disabled type="submit" [disabled]="!movieForm.valid">Add</disabled>
+
+        <div *ngIf="!movieForm.name && (movieForm.controls['name'].dirty || movieForm.touched)">
+            <br><b>Name is required.</b>
+        </div>
+      </div>
+</form>

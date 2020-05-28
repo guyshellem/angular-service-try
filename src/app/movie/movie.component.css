@@ -14,6 +14,14 @@ a {
   -moz-osx-font-smoothing: grayscale;
 }
 
+b {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #ee1e1e;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   margin: 30;
 }
@@ -30,7 +38,7 @@ router-outlet + *  {
 /* Text */
 
 h1 {
-  font-size: 32px;
+  font-size: 22px;
 }
 
 button {
@@ -46,4 +54,32 @@ button {
 button:hover {
   color: #c566f1;
   background-color: #a0d68a;
+}
+
+disabled {
+  font-size: 15px;
+  color: #000000;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #888888;
+  border: none;
+  padding: 4px 8px;
+}
+
+disabled:hover {
+  color: #222222;
+  background-color: #666666;
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 400px;
+    text-align: left;
+}
+
+input {
+    display: inline-block;
+  float: right;
 }

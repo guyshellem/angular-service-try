@@ -28,8 +28,13 @@ export class MovieComponent implements OnInit {
     this.requests.getMovies().subscribe(movies => this.movies = movies['movies']);
   }
 
+  //TODO: moves to a new view
   showMovie(name: string) {
     this.requests.getMovie(name).subscribe(res => this.movieOnDisplay = res['movie']);
+  }
+
+  deleteMovie(name: string) {
+    this.requests.deleteMovie(name).subscribe(res => this.showMovies());
   }
 
 }

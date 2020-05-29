@@ -10,10 +10,15 @@
 
 <br>
 <div *ngFor="let movie of movies">
-    Movie name: {{movie.name}}
+    <label>Movie name: {{movie.name}}</label>
     <button (click)="showMovie(movie.name);">
       Expand
     </button>
+    &nbsp;
+    <button (click)="deleteMovie(movie.name);">
+      Delete
+    </button>
+    &nbsp;
 </div>
 
 

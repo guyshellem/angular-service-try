@@ -37,6 +37,17 @@ export class MovieService {
       );
   }
 
+  public deleteMovie(movieName: String): Observable<Object> {
+    return this.http.delete(this.configUrl + movieName, this.httpOptions);
+  }
+
+  public putMovie(movie: Movie): Observable<Movie> {
+    return this.http.put<Movie>(this.configUrl + movie.name, movie, this.httpOptions)
+    .pipe(
+        catchError(this.handleError<Movie>('getMovie', {}))
+      );
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);

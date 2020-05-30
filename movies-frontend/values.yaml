@@ -1,6 +1,6 @@
 image:
   repo: gshellem/movies-frontend
-  tag: 0.0.16
+  tag: 0.0.17
 
 app:
   name: "movies-frontend"

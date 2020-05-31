@@ -1,19 +1,19 @@
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: {{ .Values.app.name }}-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
-spec:
-  rules:
-  - http:
-      paths:
-      - path: /movies(/|$)(.*)
-        backend:
-          serviceName: {{ .Values.service.name }}
-          servicePort: {{ .Values.service.externalPort }}
-
-      - path: /(.*)
-        backend:
-          serviceName: {{ .Values.service.name }}
-          servicePort: {{ .Values.service.externalPort }}
+#apiVersion: networking.k8s.io/v1beta1
+#kind: Ingress
+#metadata:
+#  name: {{ .Values.app.name }}-ingress
+#  annotations:
+#    nginx.ingress.kubernetes.io/rewrite-target: /$2
+#spec:
+#  rules:
+#  - http:
+#      paths:
+#      - path: /movies(/|$)(.*)
+#        backend:
+#          serviceName: {{ .Values.service.name }}
+#          servicePort: {{ .Values.service.externalPort }}
+#
+#      - path: /(.*)
+#        backend:
+#          serviceName: {{ .Values.service.name }}
+#          servicePort: {{ .Values.service.externalPort }}
